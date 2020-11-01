@@ -1,0 +1,41 @@
+@import '../../../scss/util/variables';
+
+.money__activity {
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	position: relative;
+	.money-background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+	}
+	.value {
+		font-size: 52px;
+		text-align: right;
+		font-weight: 400;
+	}
+	.date {
+		font-size: 10px;
+		position: absolute;
+		bottom: 2px;
+		left: 10px;
+	}
+}
+
+.type-plus {
+	.value {
+		color: $success;
+	}
+	.money-background {
+		background: linear-gradient(270.96deg, transparent -4.42%, $success 139.31%);
+	}
+}
+.type-minus {
+	.value {
+		color: $danger;
+	}
+	.money-background {
+		background: linear-gradient(270.96deg, transparent -4.42%, $danger 139.31%);
+	}
+}

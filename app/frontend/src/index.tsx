@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'rsuite/dist/styles/rsuite-dark.css'
 import './scss/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

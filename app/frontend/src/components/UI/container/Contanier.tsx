@@ -4,10 +4,10 @@ import styles from "./Container.module.scss"
 interface IProps extends React.HTMLAttributes<Element> {
 }
 
-const container = ({ children }: IProps) => (
+const Container = ({ children }: IProps) => (
     <div className={styles.container}>
         {children}
     </div>
 )
 
-export default container
+export default Container

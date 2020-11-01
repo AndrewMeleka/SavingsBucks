@@ -1,0 +1,45 @@
+.rs-btn-subtle:focus,
+.rs-btn-subtle.rs-btn-focus,
+.rs-btn-subtle:hover,
+.rs-btn-default:active,
+.rs-btn-default.rs-btn-active,
+.rs-open > .rs-dropdown-toggle.rs-btn-default {
+	background: $secondary;
+}
+
+// Input
+.rs-input {
+	background-color: #ededed;
+	color: #1a1a1a;
+	border: none;
+}
+
+// Modal
+.rs-modal-wrapper {
+	display: flex;
+	align-items: center;
+}
+.rs-modal {
+	max-width: 95%;
+	min-width: 40%;
+	min-height: 372px;
+}
+.rs-modal-body {
+	position: relative;
+	margin-top: 50px;
+	padding-bottom: 30px;
+}
+.rs-modal-footer {
+	display: flex;
+	> * {
+		margin: 0 10px;
+	}
+}
+.rs-modal-content {
+	background-color: #ffffff;
+	color: #7d7d7d;
+}
+.rs-modal-header .rs-modal-header-close {
+	color: rgba(#000000, .52);
+	font-size: 20px;
+}

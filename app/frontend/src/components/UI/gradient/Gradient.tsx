@@ -1,6 +1,25 @@
+import { motion } from 'framer-motion';
 import * as React from 'react';
 import styles from './Gradient.module.scss'
 
-const gradient = () => <div className={styles.gradient_shadow}></div>
+const gradientVariants = {
+    initial: {
+        y: -300
+    },
+    to: {
+        y: 0,
+        transition: {
+            duration: 1.5,
+            ease: "easeOut"
+        }
+    }
+}
 
-export default gradient;
+const Gradient = () => (
+    <motion.div variants={gradientVariants}
+        initial="initial"
+        animate="to"
+        className={styles.gradient_shadow}
+    />)
+
+export default Gradient;
