@@ -4,7 +4,7 @@ interface props extends React.HTMLAttributes<Element> {
     title?: string,
     status: boolean,
     handle: (status: boolean) => void,
-    ok: () => void,
+    ok?: () => void,
     footer?: JSX.Element
 }
 
