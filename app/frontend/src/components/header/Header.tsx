@@ -1,18 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import Container from '../../components/UI/container/Contanier';
 import Gradient from '../../components/UI/gradient/Gradient'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRedo } from '@fortawesome/free-solid-svg-icons'
-import { IconButton, } from 'rsuite';
 import abbreviate from 'number-abbreviate'
+import ResetMoney from './ResetMoney'
 import './Header.scss';
 
 interface props {
-    calcMoney: (type: 'plus' | 'minus') => number
+    calcMoney: (type: 'plus' | 'minus') => number,
+    handleActs: (acts: []) => void
 }
 
-const Header = ({ calcMoney }: props) => {
-
+const Header = ({ calcMoney, handleActs }: props) => {
     const savings = calcMoney('plus') - calcMoney('minus');
     return (<header className="app-header">
         {/* Gradient */}
@@ -27,9 +25,8 @@ const Header = ({ calcMoney }: props) => {
                     <span style={{ color: "#FF6F6F" }}>{abbreviate(calcMoney('minus'))}</span>
                 </div>
             </div>
-            <div className="actions">
-                <IconButton appearance="subtle" icon={<FontAwesomeIcon icon={faRedo} color="white" />} circle size="lg" />
-            </div>
+            {/* Reset Money */}
+            <ResetMoney handleActs={handleActs} />
         </Container>
     </header>)
 };
